@@ -21,7 +21,7 @@ export default function DashBoard() {
 }
 
 
-function DashBoardboard() {
+function DashBoardboard({navigation}) {
   return (
     <Container style={styles.container} >
       <Header style={styles.header}>
@@ -50,6 +50,7 @@ function DashBoardboard() {
               itempost="Office Assistant"
               itemcompany="Amiga Fashion Industry"
               itemloc="Chattisgarh"
+              navigation={navigation}
               imageUri={require('../../assets/google.png')}
             />
             <Recommendedjobs
