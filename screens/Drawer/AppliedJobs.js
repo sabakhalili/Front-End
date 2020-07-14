@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { View,StyleSheet,Text,TextInput} from "react-native";
 import {Card,CardItem, Container, Header,Left,Right,Icon,Item,Input,Content, Footer, FooterTab} from 'native-base';
 import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
-import Recommendedjobs from './Recommendedjobs';
+import Appliedcontent from './Appliedcontent';
+import Filters from './Filters';
 
-
-export default function App() {
+export default function App({navigation}) {
   
   return (
     <Container style={styles.container} >
       <Header style={styles.header}>
         <Left style={styles.left}>
-          <Icon name="md-menu" style={{ color: 'white' }} />
+          <Icon name="md-menu" style={{ color: 'white' }} onPress={() => navigation.openDrawer()} />
         </Left>
       </Header>
       <View style={{height: 70, backgroundColor: '#09115D', flexDirection: 'row', alignItems: 'center', paddingHorizontal: 5 }}>
@@ -21,23 +21,14 @@ export default function App() {
                             <Icon name="search" style={{ fontSize: 20, paddingTop: 5 }} />
                             <Input placeholder="Search" />
                         </Item>
-                    </View>
-                    <TouchableOpacity onPress={() => alert("This is a filter section")}>
-                        <View style={{ width: 100, backgroundColor: '#e7e7eb', height: 50, borderRadius: 4,marginLeft: 5, padding: 10 }}>
-
-                            <Text style={{ fontSize: 12,textAlign:'center' }}>Search using</Text>
-                            <Text style={{ fontWeight: 'bold',textAlign:'center'}}>Filter</Text>
-                        </View>
-
-                    </TouchableOpacity>
-
-                    
+                    </View> 
+                    <Filters/>    
                 </View>
-   
+                
     <Content>
       <Text style={{fontSize:15,marginLeft:13,marginTop:13}}>Recommended jobs</Text>
   <ScrollView>
-    <Recommendedjobs
+    <Appliedcontent
       itempost="Office Assistant"
       itemcompany="Amiga Fashion Industry"
       itemloc="Chattisgarh"
@@ -45,7 +36,7 @@ export default function App() {
     />
 
 
-              <Recommendedjobs
+              <Appliedcontent
               itempost="Office Assistant"
               itemcompany="Amiga Fashion Industry"
               itemloc="Chattisgarh"
@@ -53,19 +44,12 @@ export default function App() {
               />
 
 
-              <Recommendedjobs
+              <Appliedcontent
               itempost="Office Assistant"
               itemcompany="Amiga Fashion Industry"
               itemloc="Chattisgarh"
               imageUri={require('../../assets/Instagram.png')}
               
-              />
-              
-              <Recommendedjobs
-              itempost="Office Assistant"
-              itemcompany="Amiga Fashion Industry"
-              itemloc="Chattisgarh"
-              imageUri={require('../../assets/JVRLogo.png')}
               />
               
               <Footer style={{backgroundColor:'white'}}>

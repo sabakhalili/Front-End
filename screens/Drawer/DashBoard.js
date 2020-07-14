@@ -1,12 +1,14 @@
 import React,{Component} from 'react';
-import {View,StyleSheet,Button,Text,StatusBar,TextInput,FlatList} from 'react-native';
-import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
+import {View,StyleSheet,Button,Text,StatusBar,TextInput,FlatList,Modal} from 'react-native';
+import { TouchableOpacity, ScrollView,TouchableHighlight } from 'react-native-gesture-handler';
 import {Card,CardItem, Container, Header,Left,Right,Icon,Item,Input,Content, Footer, FooterTab} from 'native-base';
 
 import Recommendedjobs from './Recommendedjobs';
 import Home from './Home';
 
+
 import { createStackNavigator } from '@react-navigation/stack';
+import { useState } from 'react';
 
 
 const Stack = createStackNavigator();
@@ -22,11 +24,12 @@ export default function DashBoard() {
 
 
 function DashBoardboard({navigation}) {
+  
   return (
     <Container style={styles.container} >
       <Header style={styles.header}>
         <Left style={styles.left}>
-          <Icon name="md-menu" style={{ color: 'white' }} />
+          <Icon name="md-menu" style={{ color: 'white' }} onPress={() => navigation.openDrawer()} />
         </Left>
       </Header>
         <View style={{height: 70, backgroundColor: '#09115D', flexDirection: 'row', alignItems: 'center', paddingHorizontal: 5 }}>
@@ -36,12 +39,7 @@ function DashBoardboard({navigation}) {
               <Input placeholder="Search" />
             </Item>
           </View>
-          <TouchableOpacity onPress={() => alert("This is a filter section")}>
-            <View style={{ width: 100, backgroundColor: '#e7e7eb', height: 50, borderRadius: 4,marginLeft: 5, padding: 10 }}>
-              <Text style={{ fontSize: 12,textAlign:'center' }}>Search using</Text>
-              <Text style={{ fontWeight: 'bold',textAlign:'center'}}>Filter</Text>
-            </View>
-          </TouchableOpacity>
+          
         </View>
       <Content>
         <Text style={{fontSize:15,marginLeft:13,marginTop:13}}>Recommended jobs</Text>
@@ -99,6 +97,7 @@ left:{
     alignItems: 'flex-start',
      paddingHorizontal: 5
     },
+    
 
 
 })

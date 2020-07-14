@@ -9,6 +9,7 @@ export default function Messagebox({navigation}) {
     return (
       <Container>
         <Header searchBar rounded>
+          
           <Item>
             <Icon name="search" />
             <Input placeholder="Search Company" />

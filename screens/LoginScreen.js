@@ -20,7 +20,7 @@ export default function LoginScreen({ navigation }) {
 });
   return (
     <View style={styles.container}>
-    <StatusBar backgroundColor='#09115D' barStyle="light-content"/>
+    <StatusBar backgroundColor='#000033'/>
   <View style={styles.header}>
       <Text style={styles.text_header}>Welcome!</Text>
   </View>

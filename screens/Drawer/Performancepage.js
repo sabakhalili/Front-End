@@ -4,55 +4,31 @@ import {
   StyleSheet,
   TouchableHighlight
 } from "react-native";
-import { Container,Fab,Icon, Card, CardItem,Text,View, Header,H1, Button } from "native-base";
+import { Container,Fab,Icon, Card, CardItem,Text,View, Header,H1, Button, Content,Left, Title,List,ListItem,Accordion, Right} from "native-base";
 
 export default function Performancepage({navigation}) {
-  const [modalVisible, setModalVisible] = useState(false);
+  const dataArray = [
+    { title: "Overall Analysis", content: "Adversary question: Adversary is a person who fights against something or someone, or is a person who is considered to be a competitor or enemy. For the character of Batman, the Joker is an example of an adversary " },
+    { title: "Soft Skill Analysis", content: "Lorem ipsum dolor sit amet" },
+    { title: "Technical Analysis", content: "Lorem ipsum dolor sit amet" }
+  ];
   return (
     <Container>
       <Header style={styles.header}>
-            <H1 style={{color:'white',fontSize:20}}>Performancepage</H1>
+      <Left style={styles.left}>
+          <Icon name="md-menu" style={{ color: 'white' }} onPress={() => navigation.openDrawer()} />
+        </Left>
+        <Text style={{color:'white',alignSelf:'center'}}>Performance page</Text>
+        <Right/>
             </Header>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-      >
-          <View style={styles.modalView}>
-            <Text style={{marginBottom:50}}> Tests Available</Text>
-            <View style={{flex:1,flexDirection:'row',}}>
-            <Text style={{marginHorizontal:40}}> Eq</Text>
-            <Button  onPress={() => navigation.navigate('Tests')}><Text>Take Test</Text></Button>
-
-            </View>
-            <View style={{flex:1,flexDirection:'row'}}>
-            <Text style={{marginHorizontal:32}}>Hgmi</Text>
-            <Button  onPress={() => navigation.navigate('Hgmi')}><Text>Take Test</Text></Button>
-            </View>
-            <View style={{flex:1,flexDirection:'row'}}>
-            <Text style={{marginHorizontal:40}}>Aq</Text>
-            <Button  onPress={() => navigation.navigate('Aq')}><Text>Take Test</Text></Button>
-            </View>
-          
-            <TouchableHighlight
-              onPress={() => {
-                setModalVisible(!modalVisible);
-              }}
-            >
-              <Text>Back</Text>
-            </TouchableHighlight>
-            </View>
-      </Modal>
-
-      <Fab
-            direction="up"
-            containerStyle={{ }}
-            style={{ backgroundColor: '#04c3ea' }}
-            position="bottomRight"
-            onPress={() => navigation.navigate('Tests')}
-            >
-            <Icon name="add"  style={{color:'black'}} />
-            </Fab>
+      <Content>
+        <Text style={{textAlign:'center',marginTop:10}}>Take another test?</Text>
+        <TouchableHighlight style={{backgroundColor:'#04c3ea',width:'50%',alignSelf:'center',margin:10,padding:12,borderRadius:10}}
+        underlayColor="#16F485"  onPress={() => navigation.navigate('Tests')}>
+          <Text style={{alignSelf:'center'}}>GO TO TESTS PAGE</Text>
+        </TouchableHighlight>
+        <Accordion dataArray={dataArray} expanded={0} style={{marginTop:30}}/>
+      </Content>
     </Container>
   );
       }
@@ -95,6 +71,16 @@ export default function Performancepage({navigation}) {
         modalText: {
           marginBottom: 15,
           textAlign: "center"
-        }
+        },
+        left:{
+          flex: 1, 
+           alignItems: 'flex-start',
+            paddingHorizontal: 5
+           },
+           header:{ 
+  backgroundColor: '#09115D',
+ height: 70,
+  borderBottomColor: '#09115D'
+ },
       });
       

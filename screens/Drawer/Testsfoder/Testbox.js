@@ -1,6 +1,6 @@
 import React from 'react';
 import {View,StyleSheet} from 'react-native';
-import { Container,Header,Card,CardItem,Content,Text, Right, Button, Icon} from 'native-base';
+import { Container,Header,Card,CardItem,Content,Text, Right, Button, Icon,Left} from 'native-base';
 import { TouchableOpacity, TouchableHighlight } from 'react-native-gesture-handler';
 
 
@@ -8,7 +8,11 @@ export default function Testbox({navigation}) {
     return (
       <Container >
         <Header style={styles.header}>
-          <Text style={{color:'white'}}>Take Test</Text>
+        <Left style={styles.left}>
+          <Icon name="md-menu" style={{ color: 'white' }} onPress={() => navigation.openDrawer()} />
+        </Left>
+          <Text style={{color:'white',alignSelf:'center',marginLeft:100}}>Take Test</Text>
+          <Right/>
         </Header>
         <Content padder style={{backgroundColor:'#8790AF'}}>
         <View style={{marginTop:20}}>
