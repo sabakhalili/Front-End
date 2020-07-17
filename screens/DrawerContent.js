@@ -22,6 +22,7 @@ import * as  Animatable from 'react-native-animatable';
 function Sidebar({...props}) {
   return (
     <DrawerContentScrollView {...props}>
+      
      <View style={styles.drawerContent}>
      <View style={styles.logocontent}>
         <Animatable.Image 

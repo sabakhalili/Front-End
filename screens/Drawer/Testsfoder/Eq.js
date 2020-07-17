@@ -1,37 +1,27 @@
 import React, { Component } from "react";
 import {StyleSheet} from 'react-native';
-import { Container, Header, Content, Icon, Accordion, Text, View, Button, Title, H1,Card, CardItem,Right, Left, Body } from "native-base";
+import { Container, Header, Content, Icon, Accordion, Text, View, Button, Title, H1,Card, CardItem,Right, Left, Body, Footer } from "native-base";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
 export default function Eq() {
   return (
     <Container>
-        <Header style={styles.header}>
-            <H1 style={{color:'white',fontSize:20}}>EQ Test</H1>
-            </Header>
-            <Content padder style={{backgroundColor:'#8790AF',marginTop:150}}>
-        <View style={{marginTop:20}}>
-          <View style={[styles.item,{borderRadius:30}]}>
-            <View style={{flex:1,flexDirection:'column'}}>
-            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+        <Header></Header>
+        <Content>
+        <View style={{flexDirection:'row',justifyContent:'space-between',padding:10,flex:1}}>
             <Text>Questions: 10</Text>
-            <Text>Questions: 10</Text>
+            <Text>Time: 10</Text>
+        </View>
+        <TouchableHighlight style={{justifyContent:'center',alignItems:'center',backgroundColor:'#04c3ea',width:'40%',alignSelf:'center',margin:10,padding:12,borderRadius:10}}
+        underlayColor="#16F485"  onPress={() => navigation.navigate('')}
+        >
+            <View style={{flexDirection:'row'}}>
+              <Text style={{marginRight:10,textAlign:'center'}}>Start Test</Text>
+              <Icon name="exit" />
             </View>
-            <View style={{marginLeft:50,marginTop:50}} >
-            <TouchableHighlight 
-            underlayColor="#16F485"
-            style={[styles.signIn, {
-                    backgroundColor: '#09115D',
-                      marginTop: 50}]}
-                      onPress={() => navigation.navigate()}
-                      activeOpacity={0.1}>
-            <Text style={{color:'white'}}>ENTER TEST</Text>
-            </TouchableHighlight>
-            </View>
-          </View>
-          </View>
-          </View>
-            </Content>
+        </TouchableHighlight>
+        </Content>
+        
     </Container>
   )
 }

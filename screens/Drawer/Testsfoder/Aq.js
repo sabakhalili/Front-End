@@ -1,37 +1,28 @@
 import React, { Component } from "react";
 import {StyleSheet} from 'react-native';
-import { Container, Header, Content, Icon, Accordion, Text, View, Button, Title, H1,Card, CardItem,Right, Left } from "native-base";
+import { Container, Header, Content, Icon, Accordion, Text, View,Footer, Button, Title, H1,Card, CardItem,Right, Left } from "native-base";
 import { TouchableHighlight } from "react-native-gesture-handler";
 
 export default function Aq() {
   return (
     <Container>
-        <Header style={styles.header}>
-            <H1 style={{color:'white',fontSize:20}}>Aq test</H1>
-            </Header>
-            <Content padder style={{backgroundColor:'#8790AF',marginTop:150}}>
-        <View style={{marginTop:20}}>
-          <View style={[styles.item,{borderRadius:30}]}>
-            <View style={{flex:1,flexDirection:'column'}}>
-            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+        <Header></Header>
+        <Content>
+        <View style={{flexDirection:'row',justifyContent:'space-between',padding:10,flex:1}}>
             <Text>Questions: 10</Text>
-            <Text>Questions: 10</Text>
-            </View>
-            <View style={{marginLeft:50,marginTop:50}} >
-            <TouchableHighlight 
-            underlayColor="#16F485"
-            style={[styles.signIn, {
-                    backgroundColor: '#09115D',
-                      marginTop: 50}]}
-                      onPress={() => navigation.navigate()}
-                      activeOpacity={0.1}>
-            <Text style={{color:'white'}}>ENTER TEST</Text>
-            </TouchableHighlight>
+            <Text>Time: 10</Text>
+        </View>
+        <TouchableHighlight style={{justifyContent:'center',alignItems:'center'}}
+        >
+          <View style={{justifyContent:'center',alignItems:'center',borderWidth:1,borderRadius:10,width:'50%',height:50,borderColor:'blue',}}>
+            <View style={{flexDirection:'row',}}>
+              <Text style={{marginRight:10,textAlign:'center'}}>Start Test</Text>
+              <Icon name="exit" />
             </View>
           </View>
-          </View>
-          </View>
-            </Content>
+        </TouchableHighlight>
+        </Content>
+        <Footer/>
     </Container>
   )
 }

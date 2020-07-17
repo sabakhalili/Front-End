@@ -10,6 +10,7 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.33.1] C:\Users\sabak\
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] C:\Users\sabak\.gradle\caches\transforms-2\files-2.1\5a1065d4748ae359265a740b2069d44b\flipper-fresco-plugin-0.33.1\AndroidManifest.xml:8:1-15:12
 MERGED from [:react-native-community_masked-view] C:\Users\sabak\AwesomeProject\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_picker] C:\Users\sabak\AwesomeProject\node_modules\@react-native-community\picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-document-picker] C:\Users\sabak\AwesomeProject\node_modules\react-native-document-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-firebase] C:\Users\sabak\AwesomeProject\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [:react-native-gesture-handler] C:\Users\sabak\AwesomeProject\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] C:\Users\sabak\AwesomeProject\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -181,6 +182,8 @@ MERGED from [:react-native-community_masked-view] C:\Users\sabak\AwesomeProject\
 MERGED from [:react-native-community_masked-view] C:\Users\sabak\AwesomeProject\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_picker] C:\Users\sabak\AwesomeProject\node_modules\@react-native-community\picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_picker] C:\Users\sabak\AwesomeProject\node_modules\@react-native-community\picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-document-picker] C:\Users\sabak\AwesomeProject\node_modules\react-native-document-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-document-picker] C:\Users\sabak\AwesomeProject\node_modules\react-native-document-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase] C:\Users\sabak\AwesomeProject\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-firebase] C:\Users\sabak\AwesomeProject\node_modules\react-native-firebase\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] C:\Users\sabak\AwesomeProject\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41

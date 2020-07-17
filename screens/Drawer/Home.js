@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import {View,StyleSheet,StatusBar, TouchableHighlight} from 'react-native';
+import {View,StyleSheet,StatusBar, TouchableHighlight,TouchableOpacity} from 'react-native';
 import {Container,Header,Text, Content,Thumbnail,Tabs,Tab, Body,Segment,Card,Button,Left,Icon,Title, Right, Footer, FooterTab} from 'native-base';
 
 import Tab1 from './Tab1';
 import Tab2 from './Tab2';
 
 export default class Home extends Component{
+  constructor(props){
+  super(props)
+  this.state = {
+    liked:false,
+  };
+}
+likedToggled(){
+  this.setState({
+    liked:!this.state.liked
+  })
+}
+
+
   render(){
+    const heartIconColor=(this.state.liked)? "#04C3EA":"grey";
     return (
       
     <Container>
@@ -56,9 +70,9 @@ export default class Home extends Component{
 
         <Footer style={{backgroundColor:'#FFFFFF'}}>
           <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-            <Button transparent>
-              <Icon name='heart' style={{color:'#04C3EA',fontSize:30}} />
-            </Button>
+          <TouchableOpacity onPress={() => this.likedToggled()}>
+                    <Icon name='heart' style={{fontSize:40,color:heartIconColor,}} />
+                    </TouchableOpacity>
           <TouchableHighlight style={{borderRadius:10,backgroundColor:'#04C3EA',width:'80%',height:'95%'}}
             underlayColor='#16F485' onPress={() => navigation.navigate('')}>
               <Text style={{color:'#000000',fontSize:15,textAlign:'center',marginTop:15}} >Apply for Job</Text>
@@ -73,6 +87,7 @@ export default class Home extends Component{
   );
 }
 }
+
 
 
 const styles=StyleSheet.create({

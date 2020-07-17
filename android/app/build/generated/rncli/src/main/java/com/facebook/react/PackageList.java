@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import org.reactnative.maskedview.RNCMaskedViewPackage;
 // @react-native-community/picker
 import com.reactnativecommunity.picker.RNCPickerPackage;
+// react-native-document-picker
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
 // react-native-firebase
 import io.invertase.firebase.RNFirebasePackage;
 // react-native-gesture-handler
@@ -76,6 +78,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new RNCMaskedViewPackage(),
       new RNCPickerPackage(),
+      new DocumentPickerPackage(),
       new RNFirebasePackage(),
       new RNGestureHandlerPackage(),
       new LinearGradientPackage(),

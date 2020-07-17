@@ -12,7 +12,7 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.container}>
         <View style={styles.header}>
           <Animatable.Image 
-            animation="bounceIn"
+            animation="zoomIn" iterationCount={1}
             duraton="1500"
             source={require('../assets/JVRLogo.png')}
             style={styles.logo}
@@ -21,6 +21,8 @@ export default function HomeScreen({ navigation }) {
         </View>
           <View style={styles.footer}>
             <View style={styles.button_container}>
+            <Animatable.View
+                  animation="fadeInLeftBig">
               <View style={styles.button}>
                 <TouchableHighlight onPress={() => navigation.navigate('Login')}
                   style={styles.signIn}
@@ -28,6 +30,9 @@ export default function HomeScreen({ navigation }) {
                   <Text style={{color:'#000000',fontSize:18}}>Login</Text> 
                 </TouchableHighlight>
               </View>
+              </Animatable.View>
+              <Animatable.View 
+                  animation="fadeInRightBig">
                 <View style={styles.button}>
                   <TouchableHighlight  onPress={() => navigation.navigate('Signup')}
                     style={styles.signIn}
@@ -35,7 +40,9 @@ export default function HomeScreen({ navigation }) {
                     <Text style={{color:'#000000',fontSize:18}}>Register</Text>
                   </TouchableHighlight>
             </View>
+            </Animatable.View>
           </View>
+          
         </View>
       </View>
     );

@@ -26,56 +26,61 @@ const mDrawer = createDrawerNavigator();
 export default function ProfileScreen(){
   return (
     
-    <mDrawer.Navigator drawerContent={props=><Sidebar {...props}/>} >
+    <mDrawer.Navigator drawerContent={props=><Sidebar {...props}/>}
+    
+    drawerContentOptions={{ activeBackgroundColor: '#04C3EA', activeTintColor: '#ffffff' }}> 
       
       <mDrawer.Screen name="Dashboard" component={DashBoard} 
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="monitor-dashboard" style={{fontSize:size,color:color}}
+        <Icon name="monitor-dashboard" style={{fontSize:size,color:'#000000'}}
         />
         ),
       }}/>
        <mDrawer.Screen name="EditProfile" component={EditProfile} 
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="pencil-outline" style={{fontSize:size,color:color}}
+        <Icon name="pencil-outline" style={{fontSize:size,color:'#000000'}}
         />
         ),
       }}/>
        <mDrawer.Screen name="Performance Page" component={Performancepage} 
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="chart-line" style={{fontSize:size,color:color}}
+        <Icon name="chart-line" style={{fontSize:size,color:'#000000'}}
         />
         ),
       }}/>
       <mDrawer.Screen name="Tests" component={Tests} 
+      
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="clipboard-account" style={{fontSize:size,color:color}}
+        <Icon name="clipboard-account" style={{fontSize:size,color:'#000000'}}
         />
         ),
       }}/>
       <mDrawer.Screen name="Messages" component={Messages} 
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="android-messages" style={{fontSize:size,color:color}}
+        <Icon name="android-messages" style={{fontSize:size,color:'#000000'}}
         />
         ),
+        
       }}/>
       <mDrawer.Screen name="Applied Jobs" component={AppliedJobs} 
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="briefcase" style={{fontSize:size,color:color}}
+        <Icon name="briefcase" style={{fontSize:size,color:'#000000'}}
         />
         ),
       }}/>
       <mDrawer.Screen name="Saved Jobs" component={SavedJobs} 
       options={{
         drawerIcon:({focused,color,size})=>(
-        <Icon name="content-save" style={{fontSize:size,color:color}}
+        <Icon name="content-save" style={{fontSize:size,color:'#000000'}}
         />
         ),
+        
       }}/>
     </mDrawer.Navigator>
     
